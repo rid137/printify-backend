@@ -1,0 +1,8 @@
+type ErrorCode =
+  | "ERR_VALID"
+  | "ERR_AUTH"
+  | "ERR_FORBIDDEN"
+  | "ERR_NF"
+  | "ERR_CONFLICT"
+  | "ERR_UNPROCESSABLE"
+  | "ERR_INTERNAL";

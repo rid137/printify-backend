@@ -1,0 +1,46 @@
+{
+  "name": "printing-app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "start": "node ./dist/index.js",
+    "dev": "nodemon --exec node --no-warnings=ExperimentalWarning --loader ts-node/esm src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/express-formidable": "^1.2.3",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.29",
+    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer-express-handlebars": "^4.0.5",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "colors": "^1.4.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-formidable": "^1.2.0",
+    "firebase": "^11.8.1",
+    "firebase-admin": "^13.4.0",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "nodemailer": "^7.0.3",
+    "nodemailer-express-handlebars": "^7.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

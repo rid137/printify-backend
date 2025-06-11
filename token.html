@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FCM Token Generator</title>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging-compat.js"></script>
+  </head>
+  <body>
+    <h1>FCM Token:</h1>
+    <pre id="token"></pre>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCgJgzPaZ-XRjuJdtwiwqA75uLwzghx38Y",
+        authDomain: "printing-app-80c92.firebaseapp.com",
+        projectId: "printing-app-80c92",
+        storageBucket: "printing-app-80c92.firebasestorage.app",
+        messagingSenderId: "962407205985",
+        appId: "1:962407205985:web:615841b83ec64db0f16e20",
+        measurementId: "G-N8Z50JTSXY"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const messaging = firebase.messaging();
+
+      // Use the browser Notification API to request permission
+      Notification.requestPermission()
+        .then((permission) => {
+          if (permission === 'granted') {
+            return messaging.getToken({ 
+              vapidKey: "BDHGIQFXarrZWSYp7I4wSDGEiGEF-191Tl_eIglKl3-oYjUSI3xCYuoscMIsda48BcoKfpmsA3zzQk2Jii5w7bU" 
+            });
+          } else {
+            throw new Error("Notification permission not granted");
+          }
+        })
+        .then((token) => {
+          document.getElementById("token").innerText = token;
+          console.log("FCM Token:", token);
+        })
+        .catch((err) => {
+          console.error("Permission or Token error:", err);
+          document.getElementById("token").innerText = `Error: ${err.message}`;
+        });
+    </script>
+  </body>
+</html>

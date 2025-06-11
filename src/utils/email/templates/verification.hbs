@@ -1,0 +1,15 @@
+{{!< layouts/base}}
+
+{{#*inline "title"}}Verify Your Email Address{{/inline}}
+
+<p>Hello <strong>{{username}}</strong>,</p>
+
+<p>Thank you for registering with <strong>{{appName}}</strong>. Please use the following OTP code to verify your email address:</p>
+
+<div class="otp-box">
+  <h2 class="otp-code">{{otp}}</h2>
+</div>
+
+<p>This code will expire in <strong>10 minutes</strong>.</p>
+
+<p>If you didn't request this, please ignore this email.</p>

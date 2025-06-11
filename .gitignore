@@ -1,0 +1,53 @@
+# Node dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage output
+coverage/
+
+# PM2 process logs (if used)
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Debuggers
+.vscode-launch.json
+*.sw?
+
+prisma/dev.db
+prisma/dev.db-journal
+
+docker-compose.override.yml
+
+install.txt
