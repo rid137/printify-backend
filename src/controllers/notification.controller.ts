@@ -35,10 +35,6 @@ const sendTestNotification = asyncHandler(async (req, res) => {
         body: 'This is a test notification from your Express server!',
         icon: "https://res.cloudinary.com/dnkhxafkz/image/upload/v1730950976/jcqwmzekkoejemeypfwc.png",
         badge: "https://res.cloudinary.com/dnkhxafkz/image/upload/v1730950976/jcqwmzekkoejemeypfwc.png"
-        // data: {
-        //   click_action: 'FLUTTER_NOTIFICATION_CLICK',
-        //   screen: '/test'
-        // }
     });
     
     successResponse(res, {}, "Test notification sent");

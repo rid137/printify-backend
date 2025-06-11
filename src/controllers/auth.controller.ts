@@ -100,11 +100,6 @@ const loginUser = asyncHandler(async (req, res) => {
 
   const accessToken = createToken((existingUser._id as string).toString())
 
-  // const tokens = await DeviceToken.find({userId});
-  // if (!tokens.length) {
-  //   throw BadRequest('User or FCM token not found');
-  // }
-
   await NotificationService.sendToUser(existingUser._id as string, {
     title: 'Login Notification',
     body: 'This is a test notification from your Express server!',
