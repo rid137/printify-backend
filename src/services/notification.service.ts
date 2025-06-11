@@ -9,6 +9,7 @@ export class NotificationService {
         badge: string;
         data?: Record<string, string>;
     }) {
+        
         const message = {
         token: deviceToken,
         notification: {
@@ -17,7 +18,7 @@ export class NotificationService {
         },
         webpush: {
             notification: {
-            icon: payload.icon,
+            icon: payload.icon, 
             badge: payload.badge
             }
         },
@@ -36,9 +37,10 @@ export class NotificationService {
         data?: Record<string, string>;
     }) {
         const tokens = await DeviceToken.find({userId});
+        
         if (!tokens.length) {
             console.warn(`No FCM tokens found for user ${userId}, skipping notification.`);
-            return;
+            return; 
         }
 
         return this.sendToDevice(tokens[0].token, payload);

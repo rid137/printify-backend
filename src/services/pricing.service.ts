@@ -3,9 +3,9 @@ import { PricingRule } from '../types/pricing.types.js';
 
 export const pricingRules: PricingRule = {
     basePricePerPage: 50,
-    colorPremium: 30,
+    colorPremium: 30,            
     doubleSidedDiscount: -10,
-
+    
     paperTypePremium: {
         matte: 0,
         glossy: 20,
@@ -14,18 +14,16 @@ export const pricingRules: PricingRule = {
     },
     
     bindingCost: {
-        none: 0.00,
-        stapled: 100, 
-        spiral: 300,
-        hardcover: 500
+        none: 0.00,      
+        stapled: 100,
+        spiral: 300, 
+        hardcover: 500 
     },
     
     finishingCost: {
-        none: 0.00,
-        lamination: 300
+        none: 0.00,       
+        lamination: 300 
     },
-    
-    
 };
 
 export const calculatePrice = (
@@ -33,7 +31,6 @@ export const calculatePrice = (
   quantity: number,
   pages: number
 ): number => {
-  // Calculate cost PER PAGE
   let pricePerPage = pricingRules.basePricePerPage;
 
   if (options.color === 'color') {
