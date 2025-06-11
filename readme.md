@@ -13,6 +13,9 @@ Printify is a backend service that eliminates the hassle of waiting in long queu
 - 📦 File handling with Formidable
 - 🧾 Order & transaction management (Admin & User APIs)
 - 🧪 Swagger documentation
+- ❌ Centralized error handling using custom error classes
+- 🧱 Modular and maintainable folder structure
+- 🍃 MongoDB integration with Mongoose
 
 ---
 
@@ -28,32 +31,3 @@ Printify is a backend service that eliminates the hassle of waiting in long queu
 - **API Docs**: Swagger
 
 ---
-
-## 📂 Project Structure
-
-```bash
-src/
-├── config/
-│   └── db.ts              # Database connection
-├── routes/
-│   ├── auth.route.ts
-│   ├── notification.route.ts
-│   ├── upload.route.ts
-│   ├── payment.route.ts
-│   ├── user/
-│   │   ├── user.route.ts
-│   │   └── order.route.ts
-│   │   └── transaction.route.ts
-│   └── admin/
-│       ├── user.route.ts
-│       ├── order.route.ts
-│       └── transaction.route.ts
-├── middlewares/
-│   ├── error-handler.middleware.ts
-│   └── logger.middleware.ts
-├── utils/
-│   └── swagger.ts
-├── services/
-├── controllers/
-└── index.ts
-```
