@@ -11,18 +11,18 @@ export class NotificationService {
     }) {
         
         const message = {
-        token: deviceToken,
-        notification: {
-            title: payload.title,
-            body: payload.body,
-        },
-        webpush: {
+            token: deviceToken,
             notification: {
-            icon: payload.icon, 
-            badge: payload.badge
-            }
-        },
-        data: payload.data || {}
+                title: payload.title,
+                body: payload.body,
+            },
+            webpush: {
+                notification: {
+                icon: payload.icon, 
+                badge: payload.badge
+                }
+            },
+            data: payload.data || {}
         };
 
         const response = await messaging.send(message);

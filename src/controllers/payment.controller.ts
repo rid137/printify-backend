@@ -93,8 +93,6 @@ const verifyPayment = asyncHandler(async (req, res) => {
     }
   );
 
-  console.log("response", response.data)
-
   const { data } = response.data;
 
   if (!data.status || data.status !== "success") {

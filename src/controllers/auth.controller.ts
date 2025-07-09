@@ -140,7 +140,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
   const resetUrl = `${process.env.FRONTEND_URL}/reset-password?token=${otpCode}`;
 
   await sendForgotPasswordEmail(email, user.username, resetUrl);
-  successResponse(res, {}, "Password reset OTP sent to email");
+  successResponse(res, {}, "Password reset link sent to email");
 });
 
 // Reset Password
