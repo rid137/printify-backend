@@ -1,0 +1,7 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Developer-only FCM helper (must not be deployed)
+token.html
