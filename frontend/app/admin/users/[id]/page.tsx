@@ -1,5 +1,7 @@
 "use client";
 
+export const runtime = 'edge';
+
 import { FormEvent, use, useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Protected } from "@/components/app/protected";

@@ -1,5 +1,7 @@
 "use client";
 
+export const runtime = 'edge';
+
 import { use, useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { Protected } from "@/components/app/protected";
