@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   // React Strict Mode stays enabled. Development remounts can look like
   // duplicate fetches; lib/api/client.ts coalesces in-flight GETs instead.
   poweredByHeader: false,

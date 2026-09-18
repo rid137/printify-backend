@@ -96,21 +96,20 @@ function LoginForm() {
           {busy ? "Signing in…" : "Log in"}
         </Button>
       </form>
-      <p className="mt-4 text-sm text-muted">
-        <Link className="text-harvest" href="/forgot-password">
-          Forgot password
-        </Link>
-        {" · "}
-        <Link className="text-harvest" href="/verify-otp">
-          Verify email
-        </Link>
-      </p>
-      <p className="mt-2 text-sm text-muted">
-        No account?{" "}
-        <Link className="text-harvest" href="/register">
-          Register
-        </Link>
-      </p>
+
+      <div className="mt-6 flex items-center justify-between">
+        <p className="text-sm text-muted">
+          No account?{" "}
+          <Link className="text-harvest" href="/register">
+            Register
+          </Link>
+        </p>
+        <p className="text-sm text-muted">
+          <Link className="text-harvest" href="/forgot-password">
+            Forgot password
+          </Link>
+        </p>
+      </div>
     </AuthCard>
   );
 }

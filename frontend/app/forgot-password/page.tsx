@@ -57,9 +57,9 @@ export default function ForgotPasswordPage() {
         </Button>
       </form>
       <p className="mt-4 text-sm text-muted">
-        Have a code?{" "}
-        <Link className="text-harvest" href="/reset-password">
-          Reset password
+        Back to {" "}
+        <Link className="text-harvest" href="/login">
+          Login
         </Link>
       </p>
     </AuthCard>
