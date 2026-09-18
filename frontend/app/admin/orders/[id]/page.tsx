@@ -1,6 +1,7 @@
 "use client";
 
-export const runtime = 'edge';
+export const dynamicParams = false;
+
 
 import { FormEvent, use, useCallback, useEffect, useState } from "react";
 import { Protected } from "@/components/app/protected";
@@ -13,7 +14,8 @@ import { ApiError, toUserMessage } from "@/lib/api/client";
 import type { Order } from "@/lib/api/types";
 import { ADMIN_TARGET_STATUSES } from "@/lib/constants";
 import { formatDateTime, formatNgn } from "@/lib/utils";
-import { useToast } from "@/lib/toast";
+import { useToast } from "@/lib/toast"; 
+
 
 function AdminOrderInner({ id }: { id: string }) {
   const toast = useToast();
