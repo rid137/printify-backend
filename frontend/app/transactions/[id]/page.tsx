@@ -2,6 +2,7 @@
 
 export const runtime = 'edge';  
 
+
 import { use, useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { Protected } from "@/components/app/protected";
@@ -72,6 +73,8 @@ function Detail({ id }: { id: string }) {
     </>
   );
 }
+
+
 
 export default function TransactionDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);

@@ -1,6 +1,6 @@
 "use client";
 
-export const runtime = 'edge';
+export const runtime = 'edge';    
 
 import { FormEvent, use, useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -13,6 +13,7 @@ import { usersApi } from "@/lib/api/users";
 import { toUserMessage } from "@/lib/api/client";
 import type { User } from "@/lib/api/types";
 import { useToast } from "@/lib/toast";
+
 
 function UserInner({ id }: { id: string }) {
   const router = useRouter();
