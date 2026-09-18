@@ -1,7 +1,6 @@
 "use client";
 
-export const dynamicParams = false;
-
+export const runtime = 'edge';
 
 import { FormEvent, use, useCallback, useEffect, useState } from "react";
 import { Protected } from "@/components/app/protected";
