@@ -15,6 +15,7 @@ import type { User } from "@/lib/api/types";
 import { useToast } from "@/lib/toast";
 
 
+
 function UserInner({ id }: { id: string }) {
   const router = useRouter();
   const toast = useToast();
@@ -119,6 +120,8 @@ function UserInner({ id }: { id: string }) {
     </>
   );
 }
+
+
 
 export default function AdminUserPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
